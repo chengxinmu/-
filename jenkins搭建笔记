@@ -1,0 +1,13 @@
+cat /var/lib/jenkins/hudson.model.UpdateCenter.xml
+        <?xml version='1.1' encoding='UTF-8'?>
+            <sites>
+              <site>
+                  <id>default</id>
+                  <url>http://mirror.esuni.jp/jenkins/updates/update-center.json</url>
+              </site>
+[root@jenkins updates]# ls
+     default.json  hudson.tasks.Maven.MavenInstaller  hudson.tools.JDKInstaller
+[root@jenkins updates]# pwd
+    /var/lib/jenkins/updates
+sed -i 's/http:\/\/updates.jenkins-ci.org\/download/https:\/\/mirrors.tuna.tsinghua.edu.cn\/jenkins/g' default.json
+sed -i 's/http:\/\/www.google.com/https:\/\/www.baidu.com/g' default.json
